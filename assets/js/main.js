@@ -228,9 +228,11 @@
 
 })();
 
-
 $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
     const button = $('[data-bs-target="#' + this.id + '"]');
     const icon = button.find('i');
     icon.toggleClass('bi-chevron-double-down bi-chevron-double-up');
+});
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip({placement: "bottom", trigger: "hover", delay: { "show": 100, "hide": 100 } }); 
 });
